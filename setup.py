@@ -1,19 +1,24 @@
 from setuptools import setup
 
-requires = [
+setup_requires = [
     'pyramid',
     'zope.sqlalchemy',
     'pyramid_tm',
     'waitress',
-    'pytest',
-    'webtest',
-    'pytest-cov',
-    'sqlalchemy'
+    'sqlalchemy',
+    'pyramid_debugtoolbar'
 ]
 
-setup(name='tutorial', 
-    install_requires=requires,
+test_require = [
+    'pytest',
+    'webtest',
+    'pytest-cov'
+]
+
+setup(name='trying-pyramid', 
+    setup_requires=setup_requires,
+    test_require=test_require,
     entry_points="""\
       [paste.app_factory]
-      main = app:main
+      main = app.main:main
       """)
