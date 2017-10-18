@@ -13,7 +13,7 @@ Trying out Pyramid python framework.
     pip install -e .
 
     # Run the server
-    pserve development.ini --reload
+    pserve ini/development.ini --reload
 
     # Run unittest
     python setup.py test

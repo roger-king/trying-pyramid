@@ -5,3 +5,5 @@ pip install --upgrade pip setuptools
 ADD . /app
 WORKDIR /app
 RUN pip install -e .
+
+CMD ['pserve', 'ini/development.ini', '--reload']
