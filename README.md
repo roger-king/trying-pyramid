@@ -9,14 +9,14 @@ Trying out Pyramid python framework.
 
     source env/bin/activate
 
-    pip install
+    #Create egg-info
     pip install -e .
 
     # Run the server
     pserve development.ini --reload
 
     # Run unittest
-    pytest tutorial/tests.py -q
+    python setup.py test
 
 ```
 
