@@ -11,7 +11,7 @@ class TutorialViewTests(unittest.TestCase):
         testing.tearDown()
 
     def test_home(self):
-        from .views import home
+        from ..main.views import home
 
         request = testing.DummyRequest()
         response = home(request)
@@ -19,7 +19,7 @@ class TutorialViewTests(unittest.TestCase):
         self.assertIn(b'Visit', response.body)
 
     def test_hello(self):
-        from .views import hello
+        from ..main.views import hello
 
         request = testing.DummyRequest()
         response = hello(request)
@@ -29,7 +29,7 @@ class TutorialViewTests(unittest.TestCase):
 
 class TutorialFunctionalTests(unittest.TestCase):
     def setUp(self):
-        from app import main
+        from ..main import main
         app = main({})
         from webtest import TestApp
 
